@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            width: 400px;
+        }
+
+        table, td, th {
+            border: 1px solid #808080;
+        }
+
+        th {
+            text-align: center;
+
+        }
+
+        td {
+            text-align: left;
+        }
+
+        td, th {
+            padding: 1px 1px;
+        }
+
+        .merged-cell {
+            width: 400px;
+            height: 200px;
+        }
+
+        .cell {
+            width: 250px;
+        }
+    </style>
+
+</head>
+<body>
+<main>
+    <table>
+        <tr>
+            <th bgcolor="6A5ACD">Name</th>
+            <th bgcolor="6A5ACD">Value</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>
+                <form>
+                    <label for="for-name"></label><input type="text" id="for-name" class="cell">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>Sex</td>
+            <td>
+                <input type="radio" id="male" name="sex" value="male" checked/>
+                <label for="male">Male</label>
+                <br/>
+                <input type="radio" id="female" name="sex" value="female"/>
+                <label for="female">Female</label>
+            </td>
+        </tr>
+        <tr>
+            <td>Eye color</td>
+            <td>
+                <form>
+                    <select name="eye-color" id="eye-color">
+                        <option value="green">green</option>
+                        <option value="blue">blue</option>
+                    </select>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>Check all that apply</td>
+            <td>
+                <div>
+                    <input type="checkbox" id="feet" name="feet"/>
+                    <label for="feet">Over 6 feet tall</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="pounds" name="pounds"/>
+                    <label for="pounds">Over 200 pounds</label>
+                </div>
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div>Describe your athletic ability:</div>
+                <form>
+                    <label for="for-ability"></label>
+                    <input type="text" id="for-ability" class="merged-cell">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <form>
+                    <input type="button" class="center-cell" value="Enter my information"/>
+                </form>
+            </td>
+        </tr>
+    </table>
+</main>
+</body>
+</html>
