@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .inner-container {
+            display: grid;
+            grid-template-columns: 160px 500px;
+        }
+
+    </style>
+    <script>
+        document.getElementById('folderInput').addEventListener('change', function (event) {
+            const files = event.target.files;
+            if (files.length > 0) {
+                // Можно получить только имя выбранной папки (без полного пути на диске)
+                const folderName = files[0].webkitRelativePath.split('/')[0];
+                document.getElementById('result').textContent =
+                    `Выбрана папка: "${folderName}" (файлов внутри: ${files.length})`;
+            }
+        });
+    </script>
+</head>
+<body>
+<main>
+    <div>
+        <span style="color: #0015ff"> Administration</span>
+        -->
+        <span style="color: #7b35bd">Dynamic Converter Admin</span>
+        --> Dynamic Converter New HTML Conversion Template Form
+    </div>
+    <br>
+    <div class="inner-container">
+        <hr>
+        <hr>
+    </div>
+    <div class="inner-container">
+        <div>* Content ID</div>
+        <div>
+            <form>
+                <label>
+                    <input type="text" width="400">
+                </label>
+            </form>
+        </div>
+    </div>
+    <div class="inner-container">
+        <div>* Type</div>
+        <div>
+            <select name="departments">
+                <option value="1">ADACCT - Acme Accounting Department</option>
+                <option value="1">ADACCT2 - Acme2 Accounting Department</option>
+            </select>
+        </div>
+    </div>
+    <div class="inner-container">
+        <div>* Title</div>
+        <div>
+            <form>
+                <label>
+                    <input type="text">
+                </label>
+            </form>
+        </div>
+    </div>
+    <div class="inner-container">
+        <div>* Filer</div>
+        <div>
+            <form>
+                <label>
+                    <input type="text">
+                </label>
+            </form>
+            <select name="departments">
+                <option value="1">sysadmin</option>
+            </select>
+        </div>
+    </div>
+    <div class="inner-container">
+        <div>* Security group</div>
+        <div>
+            <select name="groups">
+                <option value="1">Public</option>
+            </select>
+        </div>
+    </div>
+    <div class="inner-container">
+        <div style="color: #B80A0AFF">* Template format</div>
+        <div style="color: #B80A0AFF">
+            <input type="radio" id="template-format1" name="template" value="Html" checked/>
+            <label for="template-format1">Html conversion template</label>
+            <input type="radio" id="template-format2" name="template" value="Classic"/>
+            <label for="template-format2">Classic html conversion template</label>
+        </div>
+    </div>
+    <div class="inner-container">
+        <div>* Revision</div>
+        <div>
+            <form>
+                <label>
+                    <input type="text">
+                </label>
+            </form>
+        </div>
+    </div>
+    <div class="inner-container">
+        <div>Folder</div>
+        <div>
+            <form id="folderForm">
+                <label for="folderInput">Browse...</label>
+                <input type="file" id="folderInput"/>
+            </form>
+        </div>
+    </div>
+    <div class="inner-container">
+        <div>Hidden</div>
+        <div>
+            <div>
+                <select name="groups">
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="inner-container">
+        <div>Comments</div>
+        <div>
+            <form>
+                <label>
+                    <input type="text">
+                </label>
+            </form>
+        </div>
+    </div>
+    <div class="inner-container">
+        <div>User Access List</div>
+        <div>
+            <form>
+                <label>
+                    <input type="text">
+                </label>
+            </form>
+        </div>
+    </div>
+    <div class="inner-container">
+        <div>Trash Delete Old Name</div>
+        <div>
+            <form>
+                <label>
+                    <input type="text">
+                </label>
+            </form>
+        </div>
+    </div>
+    <div class="inner-container">
+        <div>Trash delete location</div>
+        <div>
+            <form id="folderForm2">
+                <label for="folderInput">Browse...</label>
+                <input type="file" id="folderInput2"/>
+            </form>
+        </div>
+    </div>
+    <div class="inner-container">
+        <div>Trash Delete Date</div>
+        <div>
+            <label for="date"></label><input type="date" id="date" name="date">
+        </div>
+    </div>
+    <div class="inner-container">
+        <div>Trash Deleter</div>
+        <div>
+            <form>
+                <label>
+                    <input type="text">
+                </label>
+            </form>
+        </div>
+    </div>
+</main>
+</body>
+</html>
